@@ -17,7 +17,7 @@ The `employees` table stores detailed information about employees in the organiz
 | `department_id`    | `INT`            | `FOREIGN KEY`, `DEFAULT NULL`         | Foreign key referencing the employee's department|
 
 ## Question 01
-Write a SQL query to generate a detailed report listing all current employees who are actively working in the organization, including their personal details such as `employee_id`, `first_name`, `last_name`, `email` , `phone_number`, `hire_date`, `job_id`, `salary`, `commission_pct`, `manager_id`, and `department_id`.
+Write a SQL query to generate a detailed report listing all current employees who are actively working in the organization, including their personal details such as `employee_id`, `first_name`, `last_name`, `email`, `phone_number`, `hire_date`, `job_id`, `salary`, `commission_pct`, `manager_id`, and `department_id`.
 ```sql
 SELECT * FROM employees;
 ```
@@ -37,7 +37,7 @@ SELECT CONCAT(first_name , ' ' , last_name) 'full_name' FROM employees;
 ```
 
 ## Question 04
-Write a SQL query to find all unique department and job role pairs in the organization , ensuring that each pair represents a distinct combination of `department_id` and `job_id`.
+Write a SQL query to find all unique department and job role pairs in the organization, ensuring that each pair represents a distinct combination of `department_id` and `job_id`.
 ```sql
 SELECT DISTINCT department_id , job_id FROM employees;
 ```
