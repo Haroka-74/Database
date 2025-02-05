@@ -20,25 +20,33 @@ The `employees` table stores detailed information about employees in the organiz
 Write a SQL query to retrieve the first names and salaries of all employees sorted by their `salaries` in ascending order.
 - `ORDER BY` clause sorts the result set in ascending order by default, or explicitly by using `ASC`.
 ```sql
-SELECT first_name , salary FROM employees ORDER BY salary;
+SELECT first_name, salary
+FROM employees
+ORDER BY salary;
 ```
 
 ## Question 02
 Write a SQL query to retrieve the first names and hire dates of all employees sorted by their `hire dates` in descending order.
 ```sql
-SELECT first_name , hire_date FROM employees ORDER BY hire_date DESC;
+SELECT first_name, hire_date
+FROM employees
+ORDER BY hire_date DESC;
 ```
 
 ## Question 03
 Write a SQL query to retrieve the full names of all employees sorted by their `first names` in ascending order, and in case of a tie, sorted by their `last names` in descending order.
 ```sql
-SELECT first_name + ' ' + last_name AS 'full_name' FROM employees ORDER BY first_name ASC , last_name DESC;
+SELECT first_name + ' ' + last_name AS 'full_name'
+FROM employees
+ORDER BY first_name ASC, last_name DESC;
 ```
 
 ## Question 04
 Write a SQL query to retrieve the first names of all employees sorted by the length of their `first names` in descending order.
 ```sql
-SELECT first_name FROM employees ORDER BY LEN(first_name) DESC;
+SELECT first_name
+FROM employees
+ORDER BY LEN(first_name) DESC;
 ```
 
 ## Question 05
@@ -56,5 +64,7 @@ END;
 ```
 - In the following query, the `CalculateTotalSalary(salary, commission_pct)` function is called to compute the total salary for each employee, and the results are sorted in ascending order by the calculated total salary.
 ```sql
-SELECT first_name , salary , commission_pct , dbo.CalculateTotalSalary(salary , commission_pct) 'total_salary' FROM employees ORDER BY total_salary ASC;
+SELECT first_name, salary, commission_pct, dbo.CalculateTotalSalary(salary, commission_pct) 'total_salary'
+FROM employees
+ORDER BY total_salary ASC;
 ```
